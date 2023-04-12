@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mingflix/screen/home_screen.dart';
 import 'package:mingflix/widget/bottom_bar.dart';
 
 void main() {
@@ -29,10 +30,22 @@ class _MyAppState extends State<MyApp> {
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
-              Container(child: Center(child: Text('HOME'),),),
-              Container(child: Center(child: Text('SEARCH'),),),
-              Container(child: Center(child: Text('SAVE'),),),
-              Container(child: Center(child: Text('MORE'),),),
+              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text('SEARCH'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('SAVE'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('MORE'),
+                ),
+              ),
             ],
           ),
           bottomNavigationBar: Bottom(),
